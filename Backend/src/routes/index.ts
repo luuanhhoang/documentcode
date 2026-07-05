@@ -1,0 +1,14 @@
+import { Router } from "express";
+import { authRoutes } from "./authRoutes.js";
+import { coupleRoutes } from "./coupleRoutes.js";
+import { healthRoutes } from "./healthRoutes.js";
+import { mediaRoutes } from "./mediaRoutes.js";
+import { profileRoutes } from "./profileRoutes.js";
+
+export const apiRoutes = Router();
+
+apiRoutes.use(healthRoutes);
+apiRoutes.use(authRoutes);
+apiRoutes.use(mediaRoutes);
+apiRoutes.use(profileRoutes);
+apiRoutes.use(coupleRoutes);
